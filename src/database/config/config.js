@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 module.exports = {
   development: {
-    username: "root",
-    password: "root",
-    database: "movies_db",
-    host: "127.0.0.1",
-    port: 3306,
+    username: process.env.BD_USERNAME_DEV,
+    password: process.env.BD_PASSWORD_DEV,
+    database: process.env.BD_DATABASE_DEV,
+    host: process.env.BD_HOST_DEV,
+    port:  process.env.BD_PORT_DEV,
     dialect: "mysql",
   },
   test: {
